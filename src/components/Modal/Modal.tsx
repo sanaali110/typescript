@@ -1,9 +1,16 @@
 import { JSX } from "react";
 import "./Modal.css";
 
-type StringType = string;
+type StringType = {
+  text: string;
+  color: string;
+};
 
-type NumberType = number;
+type NumberType = {
+  text: string;
+  color: string;
+  value: number;
+};
 
 type AllType = StringType | NumberType;
 
