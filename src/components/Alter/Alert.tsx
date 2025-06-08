@@ -5,7 +5,18 @@ interface AlterProps {
 }
 
 const Alert = (props: AlterProps): JSX.Element => {
-  return <p>{props.text}</p>;
+  const handleClick = (e: React.MouseEvent<HTMLElement>): void => {
+    console.log("handle", (e.target as HTMLInputElement).value);
+  };
+
+  return (
+    <>
+      <p>{props.text}</p>
+      <button value={"click me"} onClick={handleClick}>
+        Click me
+      </button>
+    </>
+  );
 };
 
 export default Alert;
